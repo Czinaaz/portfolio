@@ -1,0 +1,88 @@
+<div class="hero" id="hero">
+  <div class="hero-content">
+    <div class="text">
+      <h1>Ivan Rudenko</h1>
+      <p>I am excited to use my skills to create innovative and user-friendly web applications that make a difference in the world.</p>
+      <ul class="hero-list">
+        <li>
+          <svg class="modal-button_svg" width="40" height="40">
+            <use href="./images/svg/icons.svg#icon-html5"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="modal-button_svg" width="40" height="40">
+            <use href="./images/svg/icons.svg#icon-javascript"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="modal-button_svg" width="40" height="40">
+            <use href="./images/svg/icons.svg#icon-css3"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="modal-button_svg" width="40" height="40">
+            <use href="./images/svg/icons.svg#icon-sass"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="modal-button_svg" width="40" height="40">
+            <use href="./images/svg/icons.svg#icon-react"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="modal-button_svg" width="40" height="40">
+            <use href="./images/svg/icons.svg#icon-node-dot-js"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="modal-button_svg" width="40" height="40">
+            <use href="./images/svg/icons.svg#icon-npm"></use>
+          </svg>
+        </li>
+        <li>
+        </li>
+      </ul>
+      <button class="hero_button button" type="button" id="openModalBtn">Hire Me</button>
+    </div>
+    <div class="image">
+      <img src="./images/photo/CV-photo-one-fotor-bg-remover-2023112217358.png" alt="My image">
+    </div>
+  </div>
+</div>
+
+<!-- Modal window -->
+
+<div class="overlay" id="overlay"></div>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <button type="modal-button" class="close" id="closeModalBtn">
+      <svg class="modal-button_svg" width="18" height="18">
+        <use href="./images/svg/icons.svg#icon-close-x"></use>
+      </svg>
+    </button>
+    <div class="modal-content_text">
+      <h3>Have thoughts to share or interested in collaboration? Email me :) </h3>
+
+      <form
+      action="https://formspree.io/f/xknladwb"
+      method="POST"
+    >
+      <label>
+        Your email:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Your message:
+        <textarea name="message"></textarea>
+      </label>
+      <button class="submit-btn" type="submit">
+        <svg  width="40" height="40">
+          <use href="./images/svg/icons.svg#icon-mail4"></use>
+        </svg>
+      </button>
+    </form>
+    </div>
+  </div>
+</div>
+<script src="./js/modal.js"></script>

@@ -1,0 +1,145 @@
+.projects {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include tablet {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    @include desktop {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+}
+
+.image-list {
+    display: flex;
+    flex-wrap:wrap;
+    list-style:inside;
+    gap: 50px;
+    margin: 2%;
+    
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;  
+    }
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row; 
+        width: 1000px;
+        margin: auto;
+    }
+    
+    &_text {
+        padding-top: 20px;
+        @include tablet {
+            width: 100%;
+        }
+        @include desktop {
+            width: 100%;
+        }
+
+        & h2 {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 36px;
+            color: #212121;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            color: #393939;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 20px;
+            margin: auto;
+        }
+    }
+    
+    &_item {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(235, 235, 235, 0.768);
+        border-bottom: 2px solid #EEEEEE;
+        border-left: 2px solid #EEEEEE;
+        border-right: 2px solid #EEEEEE;
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 450px;
+            flex-basis: calc((100% - 60px) / 2);
+        }
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-basis: calc((100% - 20%) / 2);
+            max-width: 450px;
+           
+        }
+    }
+    &_item:hover {
+        cursor: pointer;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+        @include desktop {
+            transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);  
+        }
+    
+    }
+    &_item:hover &_overlay {
+        transform: translateY(0);
+        @include desktop {
+            transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);  
+        }
+        
+    }
+   
+    &_box {
+        position: relative;
+        overflow: hidden;
+    }
+      
+    &_overlay {
+        position: absolute;
+        background: rgba(42, 42, 43, 0.9);
+        width: 100%;
+        height: 100%;
+        transform: translateY(+294px);
+       
+        
+    }
+  
+}
+
+.project-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 20%;
+    margin-top: 25%;
+    fill: white;
+    &_item a {
+        
+        fill: #EEEEEE;
+        & :hover,
+        & :focus {
+        fill: $themeColor;
+        }
+    }
+    
+}

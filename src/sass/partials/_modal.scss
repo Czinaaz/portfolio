@@ -1,0 +1,136 @@
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.799);
+  width: 100%;
+  height: 100%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  transform: scale;
+}
+
+.modal {
+  width: 95%;
+  height: 581px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.489);
+  z-index: 999; /* Higher z-index than the overlay */
+  @include desktop {
+    width: 528px;
+    height: 581px;
+    padding: 20px;
+  }
+  @include tablet {
+    width: 528px;
+    height: 581px;
+    padding: 20px;
+  }
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  &_text {
+    margin-top: 12%;
+  }
+  & h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: black;
+    margin-bottom: 4px;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+.close {
+  justify-content: center;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.close:focus,
+.close:hover {
+  background-color: $themeColor;
+  border: 2px solid black;
+}
+
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 120px;
+  
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  background-color: black;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  fill: white;
+  border: 3px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: black;
+  color: black;
+  fill: $themeColor;
+  border: 3px solid black;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+

@@ -1,0 +1,160 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.14;
+    text-decoration: none;
+    background: rgb(20, 20, 20);
+    color: white;
+    background-size: cover;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 100px;
+  
+    @include tablet {
+      display: flex;
+      background-size: cover;
+      padding-top: 50px;
+      padding-bottom: 200px;
+    }
+  
+    @include desktop {
+      display: flex;
+      max-width: 1600px;
+      background-size: cover;
+      padding-top: 50px;
+      padding-bottom: 200px;
+    }
+  
+    .hero-content {
+      display: block;
+      width: 100%;
+  
+      @include desktop {
+        display: flex;
+        width: 100%; 
+      }
+      @include tablet {
+        display: block;
+        flex-direction: row; 
+        justify-content: space-between; 
+        width: 80%; 
+      }
+    }
+  
+    .text {
+      padding: 20px;
+  
+      @include desktop {
+        text-align: left;
+        padding: 20px; 
+      }
+      @include tablet {
+        padding: 20px;
+      }
+    }
+  
+    .image {
+
+       
+        
+      img {
+        width: 50%; 
+        height: auto; 
+        }
+        @include desktop {
+          width: 50%; 
+          height: auto; 
+          position: absolute;
+          right: 1%;
+          top: 35%;
+
+        }
+        @include tablet {
+          max-width: 100%; 
+          height: auto; 
+        }
+    }
+  
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 60px;
+      padding-top: 118px;
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+  
+      @include desktop {
+        display: flex;
+        margin-right: 40%;
+        font-size: 60px;
+        padding-top: 200px;
+      }
+    }
+  
+    p {
+      margin-bottom: 20px;
+      @include desktop {
+        margin-right: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  
+    &_button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 50px;
+      background: rgb(20, 20, 20);
+      color: $themeColor;
+      margin-bottom: 118px;
+      font-style: normal;
+      border: 1px solid $themeColor;
+      border-radius: 10px;
+      margin: auto;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      cursor: pointer;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      @include desktop {
+        margin-right: 62%;
+        margin-top: 50px;
+      }
+    }
+    &_button:hover,
+    &_button:focus {
+      border: 1px solid black;
+      background: $themeColor;
+      color: black;
+    }
+  }
+  
+
+  .hero-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+    @include tablet {
+      gap: 30px;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 37% 20px 0px;
+      gap: 30px;
+    }
+  }

@@ -1,0 +1,11 @@
+
+@use './globals/globals' as*;
+
+@import './utils/colors';
+@import './utils/mixins';
+@import './partials/header';
+@import './partials/menu-container';
+@import './partials/hero';
+@import './partials/image-list';
+@import './partials/modal';
+@import './partials/footer';
