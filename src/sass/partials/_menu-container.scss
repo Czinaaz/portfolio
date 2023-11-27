@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  
     margin: 0;
     padding: 0;
     background-color: white;
@@ -22,8 +21,10 @@
   
   .menu-toggle:hover,
   .menu-toggle:focus {
-    background-color: rgba(0, 255, 170, 0.997);
-    fill: black;
+    @include desktop {
+      background-color: rgba(0, 255, 170, 0.997);
+      fill: black;
+    }
   }
   
   .menu-container {
@@ -42,8 +43,8 @@
         left: 5%;
     }
     &_logo img {
-       height: 40px;
-        width: auto;
+      height: 40px;
+      width: auto;
     }
   }
   
