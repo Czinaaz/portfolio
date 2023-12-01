@@ -61,15 +61,54 @@ footer {
     }
   }
   
-  .footer-contact {
-    margin-top: 20px;
-  }
-  
-  .footer-newsletter {
-    margin-top: 20px;
-  }
-  
+    
   .footer-copyright {
     text-align: center;
   }
   
+  .footer-contact {
+    margin: 30px auto 30px auto;
+    gap: 30px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+   
+    @include tablet {
+      gap: 30px;
+      display: flex;
+      margin: auto;
+      margin-bottom: 50px;
+      align-items: center;
+    }
+    @include desktop {
+      gap: 30px;
+      display: flex;
+      margin: auto;
+      margin-bottom: 50px;
+      align-items: center;
+    }
+  &_item {
+    padding: 20px;
+  }
+  &_item a {
+    display: flex;
+    font-style: normal;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    fill: white;
+    & svg {
+      margin-right: 10px;
+    }
+
+  }
+  &_item:hover a {
+    color: $themeColor;
+    fill: $themeColor;
+} 
+}   
