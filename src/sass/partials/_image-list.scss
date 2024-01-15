@@ -95,14 +95,14 @@
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
         @include desktop {
-            transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);  
+            // transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);  
         }
     
     }
     &_item:hover &_overroll {
         transform: translateY(0);
         @include desktop {
-            transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);  
+            // transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);  
         }
         
     }
