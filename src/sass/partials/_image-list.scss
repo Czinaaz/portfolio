@@ -9,28 +9,27 @@
         margin-top: 50px;
         margin-bottom: 50px;
     }
-    
 }
 
 .image-list {
     display: flex;
-    flex-wrap:wrap;
-    list-style:inside;
+    flex-wrap: wrap;
+    list-style: inside;
     gap: 50px;
     margin: 2%;
     @include tablet {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;  
+        flex-direction: row;
     }
     @include desktop {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row; 
+        flex-direction: row;
         width: 1000px;
         margin: auto;
     }
-    
+
     &_text {
         padding-top: 20px;
         @include tablet {
@@ -62,7 +61,7 @@
             margin: auto;
         }
     }
-    
+
     &_item {
         display: flex;
         flex-direction: column;
@@ -71,9 +70,9 @@
         margin-left: auto;
         margin-right: auto;
         background-color: rgba(235, 235, 235, 0.768);
-        border-bottom: 2px solid #EEEEEE;
-        border-left: 2px solid #EEEEEE;
-        border-right: 2px solid #EEEEEE;
+        border-bottom: 2px solid #eeeeee;
+        border-left: 2px solid #eeeeee;
+        border-right: 2px solid #eeeeee;
         @include tablet {
             display: flex;
             flex-direction: column;
@@ -87,41 +86,40 @@
             flex-wrap: wrap;
             flex-basis: calc((100% - 20%) / 2);
             max-width: 450px;
-           
+
         }
     }
+
     &_item:hover {
         cursor: pointer;
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
         @include desktop {
-            // transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);  
+            transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);  
         }
-    
+
     }
-    &_item:hover &_overroll {
-        transform: translateY(0);
-        @include desktop {
-            // transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);  
-        }
-        
-    }
-   
+
     &_box {
         position: relative;
         overflow: hidden;
     }
-      
+
     &_overroll {
         position: absolute;
         background: rgba(42, 42, 43, 0.9);
         width: 100%;
         height: 100%;
         transform: translateY(+294px);
-       
-        
-    }
   
+
+    }
+}
+
+@media (hover: none) {
+    .image-list_item:active .overroll {
+        transform: translateY(0);
+    }
 }
 
 .project-list {
@@ -133,14 +131,14 @@
     margin-top: 25%;
     fill: white;
     &_item a {
-        fill: #EEEEEE;
+        fill: #eeeeee;
         @include desktop {
             & :hover,
             & :focus {
-            fill: $themeColor;
+                fill: $themeColor;
             }
         }
-       
+
     }
-    
+
 }
