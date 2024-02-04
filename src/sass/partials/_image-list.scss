@@ -116,11 +116,11 @@
     }
 }
 
-@media (hover: none) {
-    .image-list_item:active .overroll {
-        transform: translateY(0);
-    }
-}
+// @media (hover: none) {
+//     .image-list_item:active .overroll {
+//         transform: translateY(0);
+//     }
+// }
 
 .project-list {
     display: flex;
