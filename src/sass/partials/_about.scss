@@ -1,0 +1,65 @@
+// .slider {
+//     position: relative;
+//     width: 100%;
+//     overflow: hidden;
+// }
+
+// .slide-container {
+//     display: flex;
+//     transition: transform 0.5s ease-in-out;
+// }
+
+// .slide {
+//     min-width: 7%;
+//     flex: 50px 0 auto;
+// }
+
+// .prev, .next {
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     background: rgba(0, 0, 0, 0.5);
+//     color: white;
+//     padding: 10px;
+//     cursor: pointer;
+// }
+
+// .prev {
+//     left: 0;
+// }
+
+// .next {
+//     right: 0;
+// }
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+    height: 50px; /* Wysokość slidera, możesz dostosować do swoich potrzeb */
+    background-color: #f4f4f4; /* Kolor tła slidera */
+    margin-bottom: 10px;
+  }
+  
+  .message-slider {
+    white-space: nowrap;
+    animation: slide 20s linear infinite;
+  }
+  
+  .message {
+    display: inline-block;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: 500;
+    background-color: #f4f4f4; /* Kolor tła wiadomości */
+    color: rgb(0, 0, 0);
+    // margin: 5px;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
