@@ -44,3 +44,28 @@
 //     });
 //   });
   
+// Pobieramy element message-slider
+const messageSlider = document.getElementById('messageSlider');
+
+// Zmienna przechowująca aktualną pozycję przewijania
+let scrollPosition = 0;
+
+// Funkcja przewijania wiadomości
+function scrollMessages(timestamp) {
+    // Aktualizujemy pozycję przewijania
+    scrollPosition -= 1; // Możesz dostosować szybkość przewijania zmieniając wartość
+
+    // Przewijamy wiadomość na podstawie aktualnej pozycji
+    messageSlider.style.transform = `translateX(${scrollPosition}px)`;
+
+    // Jeśli przewinęliśmy całą szerokość wiadomości, resetujemy pozycję przewijania
+    if (scrollPosition <= -messageSlider.offsetWidth) {
+        scrollPosition = 0;
+    }
+
+    // Ponownie wywołujemy funkcję scrollMessages przy użyciu requestAnimationFrame
+    requestAnimationFrame(scrollMessages);
+}
+
+// Wywołujemy funkcję scrollMessages, aby rozpocząć płynne przewijanie wiadomości
+scrollMessages();
